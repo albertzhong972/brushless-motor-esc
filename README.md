@@ -18,6 +18,10 @@ It turns out that my connection between the microcontroller and my ESC board wer
 
 My initial firmware was simple. My goal was to make the motor spin at a slow and constant RPM. At very low speeds, back EMF detection isn't needed. 
 
+![image1](https://i.imgur.com/ZAZos75.png)
+This is the switching sequence I am using to make my motor rotate. The solid looking parts on the AH, BH, and CH signals are actually PWM signals.
+
+
 https://www.youtube.com/watch?v=-_waarniZO0
 
 From the above video, the motor spins but will occasionally refuse to start correctly. I believe this is similar to how a car cannot instantaneously reach 60 mph as soon as you step on the gas pedal. To fix this problem and ensure that the motor will always rotate when I press the switch, I will slowly ramp up the speed when the motor starts. This is done by gradually increasing the frequency in which I switch between sequence states.
